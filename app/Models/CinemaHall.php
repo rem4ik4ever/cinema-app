@@ -16,4 +16,6 @@ class CinemaHall extends Model {
   ];
 
   protected $hidden = [];
+
+  public $timestamps = false;
 }

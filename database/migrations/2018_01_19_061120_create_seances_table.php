@@ -21,6 +21,7 @@ class CreateSeancesTable extends Migration
             $table->integer('cinemaHallId')->unsigned();
             $table->foreign('cinemaHallId')->references('id')->on('cinema_halls');
 
+            $table->dateTime('datetime');
             $table->enum('status', ['ontime', 'cancelled', 'delayed']);
 
             $table->timestamps();

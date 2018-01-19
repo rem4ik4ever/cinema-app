@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->decimal('paid', '5', '2');
 
             $table->integer('seatId')->unsigned();
-            $table->foreign('seatId')->references('id')->on('reservations');
+            $table->foreign('seatId')->references('id')->on('seats');
 
             $table->integer('seanceId')->unsigned();
             $table->foreign('seanceId')->references('id')->on('seances');

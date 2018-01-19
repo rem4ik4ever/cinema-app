@@ -18,7 +18,7 @@ class CreateMoviesTable extends Migration
             $table->string('name')->required();
             $table->string('description');
             $table->date('release_date');
-            $table->enum('age_resitrction', [
+            $table->enum('age_restriction', [
                 'PG', 'PG-13', 'R', 'NC-17', 'Not rated'
             ]);
             $table->string('rating')->nullable();
