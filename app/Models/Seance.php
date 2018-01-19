@@ -29,4 +29,8 @@ class Seance extends Model {
       return $this->belongsTo(CinemaHall::class, 'cinemaHallId');
   }
 
+  public function reservations() {
+      return $this->hasMany(Reservation::class, 'seanceId');
+  }
+
 }

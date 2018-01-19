@@ -107,4 +107,14 @@ class SeanceController
         }
         return response()->json($movie);
     }
+
+    public function showReservations(Request $request, $id){
+        try {
+            $seance = $this->seance->show($id);
+            $reservations = $seance->reservations()->get();
+        }   catch (\Exception $ex){
+            return $ex;
+        }
+        return response()->json($reservations);
+    }
 }

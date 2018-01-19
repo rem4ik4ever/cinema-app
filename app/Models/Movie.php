@@ -23,4 +23,8 @@ class Movie extends Model {
   protected $hidden = [];
 
 
+  public function seances(){
+    return $this->hasMany(Seance::class, 'movieId');
+  }
+
 } 

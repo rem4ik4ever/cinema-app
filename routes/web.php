@@ -27,6 +27,7 @@ $router->get('/movies/{id}', 'MoviesController@show');
 $router->post('/movies', 'MoviesController@create');
 $router->put('/movies/{id}', 'MoviesController@update');
 $router->delete('/movies/{id}', 'MoviesController@destroy');
+$router->get('/movies/{id}/seances', 'MoviesController@showSeances');
 
 
 $router->get('/seats', 'SeatController@index');
@@ -43,6 +44,7 @@ $router->put('/seances/{id}', 'SeanceController@update');
 $router->delete('/seances/{id}', 'SeanceController@destroy');
 $router->get('/seances/{id}/movie', 'SeanceController@showMovie');
 $router->get('/seances/{id}/cinema-hall', 'SeanceController@showCinemaHall');
+$router->get('/seances/{id}/reservations', 'SeanceController@showReservations');
 
 
 $router->get('/reservations', 'ReservationController@index');

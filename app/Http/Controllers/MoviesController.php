@@ -87,4 +87,14 @@ class MoviesController extends Controller
         }
         return response()->json($hall);
     }
+
+    public function showSeances(Request $request, $id) {
+        try {
+            $hall = $this->movie->show($id);
+            $seances = $hall->seances()->get();
+        }   catch (\Exception $ex){
+            return $ex;
+        }
+        return response()->json($seances);
+    }
 }

@@ -108,4 +108,9 @@ class ReservationController extends Controller
         }
         return response()->json($seance);
     }
+
+
+
+
 }
+
